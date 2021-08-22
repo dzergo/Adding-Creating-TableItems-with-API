@@ -51,18 +51,21 @@ class App extends React.Component {
         {
           if(item.id === key) {
             // POST CHECK
-            fetch('https://jsonplaceholder.typicode.com/users', {
-              method: 'POST',
-              body: item
-          }).then((response) => {
+          //   fetch('https://jsonplaceholder.typicode.com/users', {
+          //     method: 'POST',
+          //     body: item
+          // }).then((response) => {
             
-            if( response.json().status === 201) {
-              item.name = name;
-              item.email = email;
-              item.phone = phone;
-              console.log('succes');
-            }
-          })
+          //   if( response.json().status === 201) {
+          //     item.name = name;
+          //     item.email = email;
+          //     item.phone = phone;
+          //     console.log('succes');
+          //   }
+          // })
+            item.name = name;
+            item.email = email;
+            item.phone = phone;
           }
           return item;
         }),
